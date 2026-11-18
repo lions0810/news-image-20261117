@@ -1,0 +1,7 @@
+# One day in the world — 17 November 2026
+
+[![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![rank](https://make.fun/badge/news-image-20261117/lions0810/news-image-20261117/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+[![reward](https://make.fun/badge/news-image-20261117/lions0810/news-image-20261117/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
+
+Entry to make.fun's news-image-20261117 bounty: sum up 17 November 2026's world news in a single 1024×1024 image. The design is a newspaper front page — a black masthead with the date, four photo panels with rendered captions, and a footer ticker. The six stories are: Ukraine strikes the Crimea bridge while Russia hits Kyiv bridges; Iran drones target a U.S. base in Bahrain and tankers are mined off Hormuz; Xi, Trump and Putin are to meet Thursday in Shenzhen; a Vulcan rocket fails, losing 40 Amazon satellites; a cyberattack hits the BBC, CNN and 178 sites; and the U.S. loses its measles-free status after 30 years. The four photos are AI-generated editorial illustrations composed with Pillow (`compose.py`); all labels are rendered text, not part of the photos.
