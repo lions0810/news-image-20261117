@@ -150,23 +150,26 @@ def compose():
         src = Image.open(os.path.join(PANELS_DIR, panel["file"])).convert("RGB")
         canvas.paste(centre_crop_resize(src, CELL_W, PHOTO_H), (x0, y0))
 
-        # caption bar: kicker (red bold) + headline (black bold, max 2 lines)
+        # caption bar: kicker (red bold) + headline (black bold, max 2 lines).
+        # Both headline lines must fit inside the 72px bar: kicker 18px at
+        # +2, headline 23px starting at +24 with a 24px line pitch, so the
+        # second line ends at ~71px instead of overflowing into the next row.
         cap_y = y0 + PHOTO_H
         pad = 12
-        kicker_font = font(BOLD, 20)
-        draw.text((x0 + pad, cap_y + 6), panel["kicker"], font=kicker_font, fill=RED)
-        head_font = font(BOLD, 27)
+        kicker_font = font(BOLD, 18)
+        draw.text((x0 + pad, cap_y + 2), panel["kicker"], font=kicker_font, fill=RED)
+        head_font = font(BOLD, 23)
         max_w = CELL_W - 2 * pad
         lines = wrap_text(draw, panel["headline"], head_font, max_w)
-        size = 27
+        size = 23
         while len(lines) > 2 and size > 18:
             size -= 1
             head_font = font(BOLD, size)
             lines = wrap_text(draw, panel["headline"], head_font, max_w)
-        ly = cap_y + 30
+        ly = cap_y + 24
         for line in lines:
             draw.text((x0 + pad, ly), line, font=head_font, fill=BLACK)
-            ly += size + 4
+            ly += size + 1
 
     # --- footer ticker: black band, centred white text ---
     fy = H - FOOTER_H
